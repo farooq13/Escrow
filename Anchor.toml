@@ -1,0 +1,23 @@
+[toolchain]
+anchor_version = "0.31.0"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+escrow = "Eqx7jbV7X9jPFzacKKXKDkex1fnDGShUFBvm3YSeVhEv"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "npx tsx create-codama-client.ts; npx tsx --test --no-warnings tetst/*.ts"
+
+
+[test]
+startup_wait = 20000 # Increase the wait time (in milliseconds)
